@@ -5,8 +5,14 @@ require_once 'vendor/autoload.php';
 
 voku\helper\HtmlDomParser::file_get_html('http://nopixel.online/morbrowser/chop-list-database/')->$html;
 
-$pattern = "/<h3>(.*?)<\/h3>/";
-preg_match_all($pattern, $html, $matches);
+$dom = new DOMDocument();
+$paragraphs = array();
+$dom->loadHTML($html);
+foreach($dom->getElementsByTagName('h3') as $node)
+{
 
-print_r($matches);
+    $paragraphs[] = $dom->saveHTML($node);
+
+}
+print_r($paragraphs);
 ?>
