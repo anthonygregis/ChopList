@@ -8,7 +8,8 @@ voku\helper\HtmlDomParser::file_get_html('http://nopixel.online/morbrowser/chop-
 $pattern = "/<h3>(.*?)<\/h3>/";
 preg_match_all($pattern, $html, $matches);
 
-$count = count($matches)
+$count = count($matches);
+
 for ($x = 1; $x <= $count; $x++) {
   echo $matches[$x];
 ?>
