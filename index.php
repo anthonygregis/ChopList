@@ -1934,7 +1934,7 @@ $paragraphs = array();
 $dom->loadHTML($text);
 foreach($dom->getElementsByTagName('h3') as $node)
 {
-
+    $node = substr($node, 0, strpos($node, "By"));
     $paragraphs[] = $dom->saveHTML($node);
 
 }
