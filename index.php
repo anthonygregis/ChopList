@@ -4,7 +4,7 @@ use voku\helper\HtmlDomParser;
 require_once 'vendor/autoload.php';
 
 // Create DOM from string
-$html = str_get_html($string);
+$html = HtmlDomParser::str_get_html($string);
 
 $titles = array();
 // Find all tags 
