@@ -5,14 +5,8 @@ require_once 'vendor/autoload.php';
 
 voku\helper\HtmlDomParser::file_get_html('http://nopixel.online/morbrowser/chop-list-database/')->$html;
 
-$tagname = "h3";
+$pattern = "/<h3>(.*?)<\/h3>/";
+preg_match_all($pattern, $html, $matches);
+return ($matches[1]);
 
-$titles = array();
-
-// Find all tags 
-foreach($html->find($tagname) as $element) {
-    $titles[] = $element->plaintext;
-}
-
-echo count($titles);
 ?>
