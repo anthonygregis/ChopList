@@ -5,7 +5,7 @@ require_once 'vendor/autoload.php';
 
 voku\helper\HtmlDomParser::file_get_html('http://nopixel.online/morbrowser/chop-list-database/')->$html;
 
-$tagname = "<h3>";
+$tagname = "h3";
 
 $titles = array();
 
