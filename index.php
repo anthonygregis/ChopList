@@ -1932,7 +1932,7 @@ TEXT;
 $dom = new DOMDocument();
 $paragraphs = array();
 $dom->loadHTML($text);
-foreach($dom->getElementsByTagName('p') as $node)
+foreach($dom->getElementsByTagName('h3') as $node)
 {
 
     $paragraphs[] = $dom->saveHTML($node);
