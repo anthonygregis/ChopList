@@ -1,7 +1,7 @@
 <?php
 use voku\helper\HtmlDomParser;
 
-require_once 'composer/autoload.php';
+require_once 'vendor/autoload.php';
 
 // Create DOM from string
 $html = str_get_html($string);
