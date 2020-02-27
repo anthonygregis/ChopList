@@ -10,7 +10,7 @@ preg_match_all($pattern, $html, $matches);
 
 $count = count($matches);
 
-for ($x = 1; $x <= $count; $x++) {
-  echo $matches[$x];
+foreach($matches as $value){
+  echo $value . "<br>";
 }
 ?>
