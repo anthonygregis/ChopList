@@ -12,4 +12,5 @@ $count = count($matches);
 
 for ($x = 1; $x <= $count; $x++) {
   echo $matches[$x];
+}
 ?>
