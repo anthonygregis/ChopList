@@ -1939,5 +1939,5 @@ foreach($dom->getElementsByTagName('h3') as $node)
 
 }
 
-print_r(strstr($paragraphs, 'By'));
+print_r($paragraphs);
 ?>
