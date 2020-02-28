@@ -1940,7 +1940,11 @@ foreach($dom->getElementsByTagName('h3') as $node)
 }
 
 foreach($paragraphs as $value){
-  echo strstr($value, 'by', true) . "<br>";
+  $cars[] = strstr($value, 'by', true) . "<br>";
+}
+
+foreach($cars as $davalue){
+  echo $cars . "<br>";
 }
 
 ?>
