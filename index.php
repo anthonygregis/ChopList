@@ -1958,7 +1958,7 @@ foreach ($tags as $tag) {
 
 foreach($paragraphs as $value => $cartext){
   $car = strstr($cartext, 'by', true);
-  $carname = strstr($car, '<h3>', true);
+  $carname = strstr($car, '<h3>');
   $picture = str_replace('https://www.igta5.com/images/400x160/', '', $slabs[$value]);
 
    // Prepare an insert statement
