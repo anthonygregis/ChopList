@@ -1938,6 +1938,8 @@ foreach($dom->getElementsByTagName('h3') as $node)
     $paragraphs[] = $dom->saveHTML($node);
 
 }
+foreach($paragraphs as $value){
+  echo $value . "<br>";
+}
 
-print_r($paragraphs);
 ?>
