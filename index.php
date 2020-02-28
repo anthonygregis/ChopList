@@ -1969,7 +1969,7 @@ foreach($paragraphs as $value => $cartext){
        mysqli_stmt_bind_param($stmt, "ss", $param_name, $param_image);
        
        // Set parameters
-       $param_name = $car;
+       $param_name = $carname;
        $param_image = $picture;
        
        // Attempt to execute the prepared statement
