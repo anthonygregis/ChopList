@@ -36,6 +36,7 @@ if(isset($_GET["car"])){
                 }
             } else{
                 $error = "This is car does not exist or not in the database!";
+                $valid = false;
             }
         } else{
             echo "Oops! Something went wrong. Please try again later.";
@@ -48,13 +49,13 @@ if(isset($_GET["car"])){
         <title>Car Results - <?php echo $_GET["car"]; ?></title>
     </head>
     <body>
-    <?php if($valid) : ?>
+    <?php if($valid == true) : ?>
         <center>
             <h1><?php echo $car; ?></h1>
             <img src=https://www.igta5.com/images/400x160/<?php echo $picture; ?>>
         </center>
     <?php endif; ?>
-    <?php if(!$valid) : ?>
+    <?php if($valid == false) : ?>
         <center>
             <h1><?php echo $error; ?></h1>
         </center>
