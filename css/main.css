@@ -14,8 +14,6 @@ html {
  */
 body {
   margin: 0;
-  background-image: url('../images/eyes-animated-gif-12.jpg');
-  background-repeat: no-repeat;
 }
 
 /**
@@ -821,7 +819,7 @@ legend {
   -ms-flex-align: center;
       align-items: center;
   font-family: 'Montserrat', sans-serif;
-  background: url("../images/Searchs_129.png");
+  background: url("../images/eyes-animated-gif-12.gif");
   background-size: cover;
   background-position: center center;
   padding: 15px;
