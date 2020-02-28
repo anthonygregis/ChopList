@@ -1942,7 +1942,7 @@ foreach($dom->getElementsByTagName('h3') as $node)
 $doms = new DOMDocument();
 $slabs = array();
 $doms->loadHTML($text);
-$tags = $doc->getElementsByTagName('img');
+$tags = $doms->getElementsByTagName('img');
 foreach ($tags as $tag) {
   $slabs[] = $tag->getAttribute('src');
 }
