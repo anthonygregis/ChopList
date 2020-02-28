@@ -2,7 +2,7 @@
 session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    header("location: car-result.php?car=".$car);
+    header("location: car-result.php?car=".$_POST["car"]);
 }
 ?>
 <html>
