@@ -98,9 +98,15 @@ if(isset($_GET["car"])){
           <?php if($valid) : ?>
             <img src=https://www.igta5.com/images/400x160/<?php echo $picture; ?>>
             <h1 class="text-uppercase aos-init aos-animate" data-aos="fade-up"><?php echo $car; ?></h1>  
+            <form>
+                <input type="button" value="Go back!" onclick="history.back()">
+            </form>
           <?php endif; ?>
           <?php if(!$valid) : ?>  
             <h1 class="text-uppercase aos-init aos-animate" data-aos="fade-up"><?php echo $error; ?></h1>   
+            <form>
+                <input type="button" value="Go back!" onclick="history.back()">
+            </form>
           <?php endif; ?>
           </div>
             
