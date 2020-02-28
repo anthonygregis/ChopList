@@ -10,7 +10,7 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-if(isset($_GET["car"]){
+if(isset($_GET["car"])){
     // Prepare a select statement
     $sql = "SELECT name, picture FROM cars WHERE name = ?";
 
