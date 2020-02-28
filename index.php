@@ -1,7 +1,16 @@
 <?php
-use voku\helper\HtmlDomParser;
 
-require_once 'vendor/autoload.php';
+// Include config file
+require_once "assets/action/config.php";
+
+/* Attempt to connect to MySQL database */
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
 
 $text = <<<TEXT
 <h2 style="text-align:center"><strong>COMPACTS</strong></h2>
@@ -1948,8 +1957,27 @@ foreach ($tags as $tag) {
 }
 
 foreach($paragraphs as $value => $cartext){
-  echo strstr($cartext, 'by', true) . "<br>";
-  echo str_replace('https://www.igta5.com/images/400x160/', '', $slabs[$value]);
+  $car = strstr($cartext, 'by', true) . "<br>";
+  $picture = str_replace('https://www.igta5.com/images/400x160/', '', $slabs[$value]);
+
+   // Prepare an insert statement
+   $sql = "INSERT INTO cars (name, image) VALUES (?, ?)";
+         
+   if($stmt = mysqli_prepare($link, $sql)){
+       // Bind variables to the prepared statement as parameters
+       mysqli_stmt_bind_param($stmt, "ss", $param_name, $param_image);
+       
+       // Set parameters
+       $param_name = $car;
+       $param_image = $picture;
+       
+       // Attempt to execute the prepared statement
+       if(mysqli_stmt_execute($stmt)){
+           echo $car . " was successfully added <br>";
+       } else{
+           echo "Something went wrong. Please try again later.";
+       }
+   }
 }
 
 ?>
