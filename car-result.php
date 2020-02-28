@@ -35,7 +35,7 @@ if(isset($_GET["car"])){
                     $valid = true;
                 }
             } else{
-                $error = "This is car does not exist or not in the database!"
+                $error = "This is car does not exist or not in the database!";
             }
         } else{
             echo "Oops! Something went wrong. Please try again later.";
