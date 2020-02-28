@@ -6,11 +6,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="colorlib.com">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
   </head>
-  <body>
+  <body style="background-image: url('images/eyes-animated-gif-12.gif');>
     <div class="s129">
       <form>
         <div class="inner-form">
@@ -25,5 +24,5 @@
         </div>
       </form>
     </div>
-  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+  </body>
 </html>
