@@ -1938,6 +1938,6 @@ foreach($dom->getElementsByTagName('h3') as $node)
     $paragraphs[] = $dom->saveHTML($node);
 
 }
-$paragraphs = substr($paragraphs, 0, strpos($paragraphs, "By"));
+
 print_r($paragraphs);
 ?>
