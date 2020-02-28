@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
   </head>
-  <body style="background-image: url('images/eyes-animated-gif-12.gif');>
+  <body>
     <div class="s129">
       <form>
         <div class="inner-form">
