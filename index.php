@@ -1949,7 +1949,7 @@ foreach ($tags as $tag) {
 
 foreach($paragraphs as $value => $cartext){
   echo strstr($cartext, 'by', true);
-  echo strstr($slabs[$value];, 'https://www.igta5.com/images/400x160/');
+  echo strstr($slabs[$value], 'https://www.igta5.com/images/400x160/');
 }
 
 ?>
