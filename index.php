@@ -1939,10 +1939,17 @@ foreach($dom->getElementsByTagName('h3') as $node)
 
 }
 
-foreach($paragraphs as $value){
-  $cars[] = strstr($value, 'by', true);
+$doms = new DOMDocument();
+$slabs = array();
+$doms->loadHTML($text);
+$tags = $doc->getElementsByTagName('img');
+foreach ($tags as $tag) {
+  $slabs[] = $tag->getAttribute('src');
 }
 
-print_r($cars);
+foreach($paragraphs as $value => $cartext){
+  echo strstr($cartext, 'by', true) . "<br>";
+  echo $slabs[$value];
+}
 
 ?>
