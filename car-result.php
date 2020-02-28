@@ -12,7 +12,7 @@ if($link === false){
 
 if(isset($_GET["car"])){
     // Prepare a select statement
-    $sql = "SELECT name, picture FROM cars WHERE name = ?";
+    $sql = "SELECT name, image FROM cars WHERE name = ?";
 
     if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
@@ -36,7 +36,6 @@ if(isset($_GET["car"])){
                 }
             } else{
                 $error = "This is car does not exist or not in the database!";
-                $valid = false;
             }
         } else{
             echo "Oops! Something went wrong. Please try again later.";
@@ -49,13 +48,13 @@ if(isset($_GET["car"])){
         <title>Car Results - <?php echo $_GET["car"]; ?></title>
     </head>
     <body>
-    <?php if($valid == true) : ?>
+    <?php if($valid) : ?>
         <center>
             <h1><?php echo $car; ?></h1>
             <img src=https://www.igta5.com/images/400x160/<?php echo $picture; ?>>
         </center>
     <?php endif; ?>
-    <?php if($valid == false) : ?>
+    <?php if(!$valid) : ?>
         <center>
             <h1><?php echo $error; ?></h1>
         </center>
