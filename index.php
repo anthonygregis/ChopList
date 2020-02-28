@@ -1934,9 +1934,10 @@ $paragraphs = array();
 $dom->loadHTML($text);
 foreach($dom->getElementsByTagName('h3') as $node)
 {
-    $node = strstr($node, 'By', true);
+
     $paragraphs[] = $dom->saveHTML($node);
 
 }
+$paragraphs = substr($paragraphs, 0, strpos($paragraphs, "By"));
 print_r($paragraphs);
 ?>
